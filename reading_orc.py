@@ -24,7 +24,7 @@ df.write.format('json').mode('append').save('./output_orc/userdata_saved_json')
 #to load the files
 df_orc = spark.read.format('orc').load('./output_orc/userdata_saved')
 
-
+#read it in this way
 df_json = spark.read.format('json').load('./output_orc/userdata_saved_json')
 
 df_json.show()
